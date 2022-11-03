@@ -23,7 +23,7 @@
     border: var(--size) solid var(--point-color);
     margin: calc(var(--size)*2);
   }
-  
+  /*The code lines below implement the use of ease, alternate and infinite in the dots transformation and animation*/
   .element:nth-child(1) {
     animation: preloader .6s ease-in-out alternate infinite;
   }
