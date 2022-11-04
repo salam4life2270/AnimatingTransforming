@@ -4,17 +4,20 @@
     --point-color: #555;
     --size: 20px;
   }
-  
+  /*This is the first part of the project*/
+
+  /*This is the code for styling the dots*/
   .first {
     background-color: var(--main-color);
     overflow: hidden;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 0px;
+    margin-right: 0px;
     height: 300px;
     display: flex;
     align-items: center;
     align-content: center; 
     justify-content: center;  
+    
     
   }
   
@@ -34,14 +37,72 @@
   .element:nth-child(3) {
     animation: preloader .6s ease-in-out alternate .4s infinite;
   }
-  
+  /* Here I used @keyframes to transform the dots to their maximum sizes*/
   @keyframes preloader {
     100% { transform: scale(2); }
   }
   
 
-body {
-    display: flexbox;
-    flex-wrap: wrap;
-    flex-direction: column;
+
+/*This is the second part of the project*/
+
+  .second {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c13838;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 300px;
+  }
+/*The code block below styles the button and implement the transitioning period in seconds*/
+  button {
+    border: 5px solid transparent;
+    background: #AED6D1;
+    color: #55706D;
+    border-radius: 40px;
+    padding: 15px 15px;
+    overflow: hidden;
+    width: 150px;
+    transition: 
+      all        1.2s,
+      border     0.5s 1.2s,
+      box-shadow 0.3s 1.5s;
+    white-space: nowrap;
+    text-indent: 23px;
+    font-weight: bold;
+  }
+/*The style here uses translateX to move in the span element(text) along the X-axis*/
+  span {
+    display: inline-block;
+    transform: translateX(300px);
+    font-weight: normal;
+    opacity: 0;
+    transition: 
+      opacity 0.1s 0.5s,
+      transform 0.4s 0.5s;
+      transform: translateX(0);
+      opacity: 1;
+    
+
+  }
+/*This styling takes effect on hover*/
+  button:hover {
+    text-indent: 0;
+    background: #55706D;
+    color: #FFE8A3;
+    width: 250px;
+    border: 10px solid #8DCCC4;
+    box-shadow: 3px 3px 2px rgba(black, 0.15)
 }
+
+
+
+/* The code below is use to set the responsiveness of the entire body*/
+  
+  body {
+    width: min(90%, 1000px);
+    margin-inline: auto;
+  }
